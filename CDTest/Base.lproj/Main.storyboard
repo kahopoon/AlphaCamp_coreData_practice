@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CDTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +18,128 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-d2-1as">
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-dT-MFE">
+                                <rect key="frame" x="20" y="90" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBE-2f-zfV">
+                                <rect key="frame" x="20" y="140" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XY4-Nc-rUL">
+                                <rect key="frame" x="20" y="190" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-Wn-w35">
+                                <rect key="frame" x="55" y="240" width="490" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-Bj-c3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <color key="backgroundColor" red="0.64069393350000003" green="0.68181923700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8M-Jy-f7s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-Vo-lNS">
+                                        <rect key="frame" x="170" y="0.0" width="150" height="30"/>
+                                        <color key="backgroundColor" red="0.64069393350000003" green="0.68181923700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Query All"/>
+                                        <connections>
+                                            <action selector="queryAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5F3-JI-dkh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaN-AH-e2N">
+                                        <rect key="frame" x="340" y="0.0" width="150" height="30"/>
+                                        <color key="backgroundColor" red="0.64069393350000003" green="0.68181923700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Query One"/>
+                                        <connections>
+                                            <action selector="queryOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcE-Yn-BZG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JE4-tG-CXy">
+                                <rect key="frame" x="50" y="290" width="500" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwK-i0-SIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                        <color key="backgroundColor" red="0.64069393350000003" green="0.68181923700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="updateBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Igx-Y4-OKf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiE-fB-EYG">
+                                        <rect key="frame" x="260" y="0.0" width="240" height="30"/>
+                                        <color key="backgroundColor" red="0.64069393350000003" green="0.68181923700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3l-6N-oca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVX-BE-ezG" userLabel="Show All Query">
+                                <rect key="frame" x="20" y="340" width="560" height="240"/>
+                                <color key="backgroundColor" red="0.57164153145599295" green="0.6696429034857363" blue="0.96664663461538458" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48165119802825596" green="0.42153854549760417" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D7c-Vo-lNS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="1V8-PQ-8a5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wVX-BE-ezG" secondAttribute="bottom" constant="20" id="4ak-jU-sIQ"/>
+                            <constraint firstItem="wVX-BE-ezG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="65C-Yn-x0N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBE-2f-zfV" secondAttribute="trailing" id="76e-WT-Wls"/>
+                            <constraint firstItem="JE4-tG-CXy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Z5-Ql-Jad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XY4-Nc-rUL" secondAttribute="trailing" id="GMJ-3C-cee"/>
+                            <constraint firstItem="UYy-d2-1as" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HCX-W9-vJD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wVX-BE-ezG" secondAttribute="trailing" id="HcL-Wj-NlF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOg-dT-MFE" secondAttribute="trailing" id="HlN-GM-t5k"/>
+                            <constraint firstItem="XY4-Nc-rUL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TwQ-cT-4CE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UYy-d2-1as" secondAttribute="trailing" id="Vfu-SO-u9p"/>
+                            <constraint firstItem="QwK-i0-SIG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="XdB-KL-can"/>
+                            <constraint firstItem="UYy-d2-1as" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ba4-AG-Jnt"/>
+                            <constraint firstItem="wVX-BE-ezG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="340" id="brX-VK-8KE"/>
+                            <constraint firstItem="JE4-tG-CXy" firstAttribute="top" secondItem="bfZ-Wn-w35" secondAttribute="bottom" constant="20" id="de0-Oa-SWw"/>
+                            <constraint firstItem="7Pd-Bj-c3b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="eep-dM-omN"/>
+                            <constraint firstItem="bfZ-Wn-w35" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iSV-Wt-Jdi"/>
+                            <constraint firstItem="dBE-2f-zfV" firstAttribute="top" secondItem="bOg-dT-MFE" secondAttribute="bottom" constant="20" id="jcB-QN-bd3"/>
+                            <constraint firstItem="bfZ-Wn-w35" firstAttribute="top" secondItem="XY4-Nc-rUL" secondAttribute="bottom" constant="20" id="mYf-Tb-AIX"/>
+                            <constraint firstItem="BaN-AH-e2N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="qnO-ao-Qy8"/>
+                            <constraint firstItem="WiE-fB-EYG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="rfA-6F-f1l"/>
+                            <constraint firstItem="dBE-2f-zfV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sWG-CH-LgU"/>
+                            <constraint firstItem="bOg-dT-MFE" firstAttribute="top" secondItem="UYy-d2-1as" secondAttribute="bottom" constant="20" id="tvW-Nt-OPy"/>
+                            <constraint firstItem="bOg-dT-MFE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vls-n3-ivf"/>
+                            <constraint firstItem="XY4-Nc-rUL" firstAttribute="top" secondItem="dBE-2f-zfV" secondAttribute="bottom" constant="20" id="x57-Ne-fEy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="7Pd-Bj-c3b" id="xRP-qW-Ttj"/>
+                        <outlet property="deleteButton" destination="WiE-fB-EYG" id="gj8-Hw-ehI"/>
+                        <outlet property="queryallButton" destination="D7c-Vo-lNS" id="DPr-aR-OhW"/>
+                        <outlet property="queryoneButton" destination="BaN-AH-e2N" id="hkf-WW-gqX"/>
+                        <outlet property="textfieldAuthor" destination="dBE-2f-zfV" id="Aq6-mS-RQr"/>
+                        <outlet property="textfieldBookName" destination="bOg-dT-MFE" id="IMh-dy-3Zv"/>
+                        <outlet property="textfieldISBN" destination="UYy-d2-1as" id="wjO-Fs-8FP"/>
+                        <outlet property="textfieldPrice" destination="XY4-Nc-rUL" id="j3P-aa-guC"/>
+                        <outlet property="textviewShowAll" destination="wVX-BE-ezG" id="zaQ-Tn-bqy"/>
+                        <outlet property="updateButton" destination="QwK-i0-SIG" id="pGk-UQ-FK7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

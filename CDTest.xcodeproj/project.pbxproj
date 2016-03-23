@@ -13,6 +13,8 @@
 		113F3C481CA239B100D40365 /* CDTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 113F3C461CA239B100D40365 /* CDTest.xcdatamodeld */; };
 		113F3C4A1CA239B100D40365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113F3C491CA239B100D40365 /* Assets.xcassets */; };
 		113F3C4D1CA239B100D40365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113F3C4B1CA239B100D40365 /* LaunchScreen.storyboard */; };
+		113F3C561CA23AF700D40365 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F3C541CA23AF700D40365 /* Book+CoreDataProperties.swift */; };
+		113F3C571CA23AF700D40365 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F3C551CA23AF700D40365 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		113F3C491CA239B100D40365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113F3C4C1CA239B100D40365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113F3C4E1CA239B100D40365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		113F3C541CA23AF700D40365 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		113F3C551CA23AF700D40365 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				113F3C4B1CA239B100D40365 /* LaunchScreen.storyboard */,
 				113F3C4E1CA239B100D40365 /* Info.plist */,
 				113F3C461CA239B100D40365 /* CDTest.xcdatamodeld */,
+				113F3C541CA23AF700D40365 /* Book+CoreDataProperties.swift */,
+				113F3C551CA23AF700D40365 /* Book.swift */,
 			);
 			path = CDTest;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				113F3C421CA239B100D40365 /* ViewController.swift in Sources */,
 				113F3C401CA239B100D40365 /* AppDelegate.swift in Sources */,
+				113F3C561CA23AF700D40365 /* Book+CoreDataProperties.swift in Sources */,
+				113F3C571CA23AF700D40365 /* Book.swift in Sources */,
 				113F3C481CA239B100D40365 /* CDTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
