@@ -215,12 +215,12 @@ on before, we save query result into variable currentBook, more than data assign
 simply use the concept above, use currentBook as pointer, if the pointer is not null, delete object with corresponding address and clear the pointer(as become useless after), else return warning message saying nothing has been deleted.
 
 ## some screenshots
-`**record added / duplicated warning / input incomplete warning**`  
+**`record added / duplicated warning / input incomplete warning`**  
 ![Alt text](screenshot/addComplete.png?raw=true "record added")
 ![Alt text](screenshot/addDuplicate.png?raw=true "duplicated warning")
 ![Alt text](screenshot/addIncomplete.png?raw=true "input incomplete warning")
   
-`**query all records / query single record**`  
+**`query all records / query single record`**  
 ![Alt text](screenshot/queryAll.png?raw=true "query all records")
 ![Alt text](screenshot/queryOne.png?raw=true "query single records")
   
