@@ -46,7 +46,7 @@ func buttonBeauty(buttons:[UIButton]) {
 ```
 nothing special to start, just defined some UIButton appearance changes, wrapped them as array to buttonBeauty function, they all now with rounded corner and white color border :) 
 
-## helper function
+## helper functions
 before we get started with button's action, let's introdue our helper functions like buttonBeauty.
 
 ``` swift
