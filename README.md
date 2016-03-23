@@ -2,7 +2,7 @@
 
 ![Alt text](screenshot/mainScreen.png?raw=true "main screen")
 
-check CoreData at project create, input all necessary entity and attributes, create NSManagedObject subclass for entity, and not focus on ViewController code.
+check CoreData at project create, input all necessary entity and attributes, create NSManagedObject subclass for entity, and now focus on ViewController code.
 
 ## Import
 ```swift
