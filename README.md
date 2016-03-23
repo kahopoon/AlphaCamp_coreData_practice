@@ -224,6 +224,6 @@ simply use the concept above, use currentBook as pointer, if the pointer is not 
 ![Alt text](screenshot/queryAll.png?raw=true "query all records")
 ![Alt text](screenshot/queryOne.png?raw=true "query single records")
   
-`**update record row / before deletion**`  
+**`update record row / before deletion`**  
 ![Alt text](screenshot/updateRow.png?raw=true "update record row")
 ![Alt text](screenshot/beforeDelete.png?raw=true "before deletion")
