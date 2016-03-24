@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         buttonBeauty([addButton, queryallButton, queryoneButton, updateButton, deleteButton])
         textviewShowAll.layer.cornerRadius = 5
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,6 +139,10 @@ class ViewController: UIViewController {
     }
     
     func inputValid() -> Bool {
+        for value in Array(String(textfieldPrice.text).characters) {
+            if Int(String(value)) == nil {return false}
+        }
+
         return (textfieldBookName.text != "" && textfieldAuthor.text != "" && textfieldPrice.text != "" && textfieldISBN.text != "")
     }
     
