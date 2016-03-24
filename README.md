@@ -136,6 +136,7 @@ call to dismiss keyboard, clear textfield data.
 ```
 This add button function will first check either any input field is empty or ISBN has been found in existing records, pop up appropriate warning message. insert record only if everything alrite.
 
+## action for all query button
 ```swift
 @IBAction func queryAll(sender: AnyObject) {
         let fetchRequest = NSFetchRequest(entityName: "Book")
@@ -158,6 +159,7 @@ This add button function will first check either any input field is empty or ISB
 ```
 most straight forward one, let name as the sortDescriptor at sorting, display all records, if no record found, pop up no data message.
 
+## action for query single row button
 ```swift
 @IBAction func queryOne(sender: AnyObject) {
         if textfieldISBN.text != "" {
@@ -181,6 +183,7 @@ most straight forward one, let name as the sortDescriptor at sorting, display al
 ```
 query single row function, it get results from help of searchRowBy function, if return result is empty, pop up not found warning, else return result back on text field and save on class variable 'currentBook' (because we could have it edit and update later)
 
+## action for update book record button
 ```swift
 @IBAction func updateBook(sender: AnyObject) {
         
@@ -200,6 +203,7 @@ query single row function, it get results from help of searchRowBy function, if 
 ```
 on before, we save query result into variable currentBook, more than data assignment, it act as an pointer/indicator to tell which specific record is. And back to this function, it check if all text fields are not empty, then corresponding text fields' data will replace with currentBook's data, when the data come save, it overwrite and update the existing record with pointer identification
 
+## action for record deletion button
 ```swift
 @IBAction func deleteBook(sender: AnyObject) {
         if currentBook != nil {
